@@ -1,0 +1,5 @@
+env          = "dev"
+vpc_name     = "ryedr-dev"
+db_name      = "ryedr"
+db_username  = "postgres"
+db_password  = "ryedr2507"

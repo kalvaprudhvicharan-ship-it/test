@@ -1,0 +1,6 @@
+env     = "prod"
+github_connection_arn = "arn:aws:codeconnections:ap-south-1:251988004327:connection/edd7eeca-dadb-4573-87b9-18905efd42d6"
+github_owner    = "PRAKYDR-TECH-PRIVATE-LIMITED"
+github_repo     = "Ryedr_backend"
+github_branch  = "main"
+ecr_repository_url = "251988004327.dkr.ecr.ap-south-1.amazonaws.com/ryedr-backend-prod"

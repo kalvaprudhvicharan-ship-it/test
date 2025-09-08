@@ -1,0 +1,29 @@
+version: 0.2
+env:
+  variables:
+    APP_NAME: ryedr
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws --version
+      - ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+      - aws ecr get-login-password | docker login --username AWS --password-stdin ${ECR_REPO%/*}
+      - IMAGE_URI="$ECR_REPO:latest"
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build -t $IMAGE_URI .
+      - docker push $IMAGE_URI
+  post_build:
+    commands:
+      - echo Writing image URI file
+      - mkdir -p artifacts
+      - echo $IMAGE_URI > artifacts/image_uri.txt
+artifacts:
+  files:
+    - appspec.yml
+    - scripts/**
+    - artifacts/image_uri.txt
+

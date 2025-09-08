@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /scripts
+    destination: /opt/ryedr/scripts
+  - source: /artifacts/image_uri.txt
+    destination: /opt/ryedr
+hooks:
+  AfterInstall:
+    - location: scripts/deploy.sh
+      timeout: 300
+      runas: root
+

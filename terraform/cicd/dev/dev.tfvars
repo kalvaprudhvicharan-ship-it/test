@@ -1,0 +1,6 @@
+env     = "dev"
+github_connection_arn = "arn:aws:codeconnections:ap-south-1:251988004327:connection/77883da9-d372-4e4d-bf19-4bf4b1f0fad4"
+github_owner    = "kalvaprudhvicharan-ship-it"
+github_repo     = "test"
+github_branch  = "main"
+ecr_repository_url = "251988004327.dkr.ecr.ap-south-1.amazonaws.com/ryedr-backend-dev"

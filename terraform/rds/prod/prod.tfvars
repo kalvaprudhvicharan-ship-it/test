@@ -1,0 +1,5 @@
+env          = "prod"
+vpc_name     = "ryedr-prod"
+db_name      = "ryedr"
+db_username  = "postgres"
+db_password  = "ryedr2507"
